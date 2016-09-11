@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
                 0, 0, new LocationListener() {
                     @Override
                     public void onLocationChanged(Location location) {
+
                         Log.d("GPS", "Location:" + location.getLatitude() + "," + location.getLongitude());
+                        Log.d("GPS", "Accu:" + location.getAccuracy() + ",alt:" + location.getAltitude());
                         Geocoder gc = new Geocoder(context, Locale.TRADITIONAL_CHINESE);
                         List<Address> lstAddress = null;
                         try {
